@@ -48,10 +48,11 @@ class _NewsScreenState extends State<NewsScreen> {
               );
             }
             if (state?.isError() ?? false) {
-              return const Center(
+              return Center(
                 child: Text(
-                  "Something Went Wrong",
-                  style: TextStyle(
+                  state?.error.message,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 20,
                   ),
